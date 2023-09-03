@@ -1,7 +1,7 @@
 from libraries import keys
 
 def main():
-    print(keys.a_flat_major)
+    return
     
 if __name__ == "__main__":
     main()
