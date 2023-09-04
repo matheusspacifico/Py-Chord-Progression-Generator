@@ -1,4 +1,5 @@
 from my_libraries.music_keys import *
+from my_libraries.progressions import *
 import random
 
 def entry_point():
@@ -33,6 +34,14 @@ def chosen_key(option):
                 print("Invalid answer! Try again.")
     elif option == 2:
         return random.choice(all_keys)
+    
+def get_chords(final_key):
+    progression = random.choice(all_progressions)
+    chords = ""
+    for i in progression:
+        chords += final_key[i]
+        chords += " "
+    return chords[:-1]
         
 def main():
     print("===========================================================")
@@ -41,7 +50,11 @@ def main():
     print("[2] - Use a random key")
     option = entry_point()
     final_key = chosen_key(option)
-    print(final_key)
+    chords = get_chords(final_key)
+    print("===========================================================")
+    print(f"Key: {final_key}")
+    print(f"Chords: {chords}")
+    print("===========================================================")
     
 if __name__ == "__main__":
     main()
