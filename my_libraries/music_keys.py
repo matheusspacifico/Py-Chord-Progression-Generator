@@ -34,6 +34,10 @@ f_sharp_major = ["F#", "G#", "A#", "B", "C#", "D#", "E#"]
 g_flat_minor = ["Gb", "Ab", "Bbb", "Cb", "Db", "Ebb", "Fb"]
 g_sharp_minor = ["G#", "A#", "B", "C#", "D#", "E", "F#"]
 
+# Keys that didn't fit
+f_sharp_minor = ["F#", "G#", "A", "B", "C#", "D", "E"]
+g_sharp_major = ["G#", "A#", "C", "Db", "Eb", "F", "G"]
+
 # Every key listed
 all_keys = [
     a_flat_major, a_major, b_flat_major, b_major, c_major, d_flat_major, d_major,
@@ -42,3 +46,7 @@ all_keys = [
     a_sharp_minor, c_sharp_major, c_sharp_minor, d_flat_major, d_sharp_minor,
     f_sharp_major, g_flat_minor, g_sharp_minor
 ]
+
+all_keys_short = ["Ab", "A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "F#", "Gb", "G",
+        "Am", "Bbm", "Bm", "Cm", "Dm", "Ebm", "Em", "Fm", "Gm", 
+        "A#m", "C#m", "C#", "Db", "D#m", "F#m", "F#", "Gb", "G#m", "G#"]
