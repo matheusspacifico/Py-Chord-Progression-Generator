@@ -28,73 +28,11 @@ def chosen_key(option):
             if option_key == "check":
                 print(all_keys_short)
             elif option_key in all_keys_short:
-                match option_key:
-                    case "Ab":
-                        return a_flat_major
-                    case "A":
-                        return a_major
-                    case "Bb":
-                        return b_flat_major
-                    case "B":
-                        return b_major
-                    case "C":
-                        return c_major
-                    case "Db":
-                        return d_flat_major
-                    case "D":
-                        return d_major
-                    case "Eb":
-                        return e_flat_major
-                    case "E":
-                        return e_major
-                    case "F":
-                        return f_major
-                    case "F#":
-                        return f_sharp_major
-                    case "Gb":
-                        return g_flat_major
-                    case "G":
-                        return g_major
-                    case "Am":
-                        return a_minor
-                    case "Bbm":
-                        return b_flat_minor
-                    case "Bm":
-                        return b_minor
-                    case "Cm":
-                        return c_minor
-                    case "Dm":
-                        return d_minor
-                    case "Ebm":
-                        return e_flat_minor
-                    case "Em":
-                        return e_minor
-                    case "Fm":
-                        return f_minor
-                    case "Gm":
-                        return g_minor
-                    case "A#m":
-                        return a_sharp_minor
-                    case "C#m":
-                        return c_sharp_minor
-                    case "C#":
-                        return c_sharp_major
-                    case "D#m":
-                        return d_sharp_minor
-                    case "F#m":
-                        return f_sharp_minor
-                    case "F#":
-                        return f_sharp_major
-                    case "Gb":
-                        return g_flat_major
-                    case "G#m":
-                        return g_sharp_minor
-                    case "G#":
-                        return g_sharp_major
+                return key_to_scale[option_key]
             else:
                 print("Invalid answer! Try again.")
     elif option == 2:
-        pass # escrever funcao random()
+        return random.choice(all_keys)
         
 def main():
     print("===========================================================")
