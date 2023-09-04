@@ -33,3 +33,13 @@ d_sharp_minor = ["D#", "E#", "F#", "G#", "A#", "B", "C#"]
 f_sharp_major = ["F#", "G#", "A#", "B", "C#", "D#", "E#"]
 g_flat_minor = ["Gb", "Ab", "Bbb", "Cb", "Db", "Ebb", "Fb"]
 g_sharp_minor = ["G#", "A#", "B", "C#", "D#", "E", "F#"]
+
+# Every key listed
+
+all_keys = [
+    a_flat_major, a_major, b_flat_major, b_major, c_major, d_flat_major, d_major,
+    e_flat_major, e_major, f_major, f_sharp_major, g_flat_major, g_major, a_minor,
+    b_flat_minor, b_minor, c_minor, d_minor, e_flat_minor, e_minor, f_minor, g_minor,
+    a_sharp_minor, c_sharp_major, c_sharp_minor, d_flat_major, d_sharp_minor,
+    f_sharp_major, g_flat_minor, g_sharp_minor
+]
