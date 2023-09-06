@@ -1,4 +1,5 @@
 from music_keys import *
+from progressions import *
 
 def match_key(option_key):
     match option_key:
@@ -64,4 +65,3 @@ def match_key(option_key):
             return g_sharp_minor
         case "G#":
             return g_sharp_major
-    

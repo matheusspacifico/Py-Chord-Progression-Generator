@@ -33,4 +33,4 @@ seventeenth_progression = [1, 4, 2, 5]
 # 29th - twenty-ninth
 # 30th - thirtieth
 
-all_progressions = [first_progression, second_progression]
+all_progressions = [first_progression, second_progression, third_progression]

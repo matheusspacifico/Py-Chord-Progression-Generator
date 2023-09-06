@@ -29,20 +29,24 @@ def chosen_key(option):
             if option_key == "check":
                 print(all_keys_short)
             elif option_key in all_keys_short:
-                return key_to_scale[option_key]
+                key_cache = option_key
+                return key_to_scale[option_key], key_cache
             else:
                 print("Invalid answer! Try again.")
     elif option == 2:
-        return random.choice(all_keys)
+        random_key = random.choice(all_keys_short)
+        key_cache = random_key
+        return key_to_scale[random_key], key_cache
     
 def get_chords(final_key):
     progression = random.choice(all_progressions)
     chords = ""
-    for i in progression:
-        chords += final_key[i]
-        chords += " "
-    return chords[:-1]
-        
+    for i, chord in enumerate(progression):
+        chords += final_key[chord]
+        if i < len(progression) - 1:
+            chords += " "
+    return chords
+
 def main():
     print("===========================================================")
     print("Would you like to choose a key or let a random one be used?")
@@ -50,10 +54,12 @@ def main():
     print("[2] - Use a random key")
     option = entry_point()
     final_key = chosen_key(option)
-    chords = get_chords(final_key)
+    notes, key = final_key
+    chords = get_chords(notes)
     print("===========================================================")
-    print(f"Key: {final_key}")
-    print(f"Chords: {chords}")
+    print(f"Key: {key}")
+    print(f"Notes: {notes}")
+    print(f"Chords: {chords}") # adicionar sétimas e dizer se o acorde é menor!!!
     print("===========================================================")
     
 if __name__ == "__main__":
