@@ -40,7 +40,7 @@ def chosen_key(option):
         return key_to_scale[random_key], key_cache
     
 def get_chords(final_key):
-    progression = random.choice(test) # using "test" instead of "all_progressions" to test it
+    progression = "eighth" # using "test" instead of "all_progressions" to test it
     _chords = ""
     for i, chord in enumerate(progression_dict[progression]):
         _chords += final_key[chord-1]
@@ -60,7 +60,7 @@ def main():
     chords = get_chords(notes)
     print("====================================================================")
     print(f"Key: {key}")
-    print(f"Notes: {notes}")
+    print(f"Notes/Harmonic field: {notes}")
     print(f"Chord progression: {chords}") # adicionar sétimas e dizer se o acorde é menor!!!
     print("====================================================================")
     

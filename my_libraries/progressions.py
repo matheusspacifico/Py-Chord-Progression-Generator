@@ -33,7 +33,7 @@ seventeenth_progression = [1, 4, 2, 5]
 # 29th - twenty-ninth
 # 30th - thirtieth
 
-test = ["fourth", "third"]
+test = ["seventh"]
 
 all_progressions = [
     "first", "second", "third", "fourth", "fourth_alternative",
