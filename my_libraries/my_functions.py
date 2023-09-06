@@ -1,67 +1,19 @@
-from music_keys import *
-from progressions import *
-
-def match_key(option_key):
-    match option_key:
-        case "Ab":
-            return a_flat_major
-        case "A":
-            return a_major
-        case "Bb":
-            return b_flat_major
-        case "B":
-            return b_major
-        case "C":
-            return c_major
-        case "Db":
-            return d_flat_major
-        case "D":
-            return d_major
-        case "Eb":
-            return e_flat_major
-        case "E":
-            return e_major
-        case "F":
-            return f_major
-        case "F#":
-            return f_sharp_major
-        case "Gb":
-            return g_flat_major
-        case "G":
-            return g_major
-        case "Am":
-            return a_minor
-        case "Bbm":
-            return b_flat_minor
-        case "Bm":
-            return b_minor
-        case "Cm":
-            return c_minor
-        case "Dm":
-            return d_minor
-        case "Ebm":
-            return e_flat_minor
-        case "Em":
-            return e_minor
-        case "Fm":
-            return f_minor
-        case "Gm":
-            return g_minor
-        case "A#m":
-            return a_sharp_minor
-        case "C#m":
-            return c_sharp_minor
-        case "C#":
-            return c_sharp_major
-        case "D#m":
-            return d_sharp_minor
-        case "F#m":
-            return f_sharp_minor
-        case "F#":
-            return f_sharp_major
-        case "Gb":
-            return g_flat_major
-        case "G#m":
-            return g_sharp_minor
-        case "G#":
-            return g_sharp_major
+def progression_correction(_chords, progression):
+    if progression == "third":
+        spaces = 0
+        for i in _chords:
+            if spaces == 2:
+                _chords = _chords.replace(i, i+"b")
+                break
+            elif i == " ":
+                spaces += 1
+    elif progression == "fourth":
+        spaces = 0
+        for i in range(len(_chords)):
+            if _chords[i] == " ":
+                spaces += 1
+                if spaces == 2:
+                    _chords = _chords[:i] + "7" + _chords[i:]
+                    break
+    return _chords
+    

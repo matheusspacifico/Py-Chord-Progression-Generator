@@ -1,5 +1,6 @@
 from my_libraries.music_keys import *
 from my_libraries.progressions import *
+from my_libraries.my_functions import *
 import random
 
 def entry_point():
@@ -21,7 +22,7 @@ def entry_point():
 
 def chosen_key(option):
     if option == 1:
-        print("===========================================================")
+        print("====================================================================")
         print("Please choose a key.")
         print("Type \"check\" if you wish to see all the options available.")
         while True:
@@ -39,16 +40,17 @@ def chosen_key(option):
         return key_to_scale[random_key], key_cache
     
 def get_chords(final_key):
-    progression = random.choice(all_progressions)
-    chords = ""
-    for i, chord in enumerate(progression):
-        chords += final_key[chord]
+    progression = random.choice(test) # using "test" instead of "all_progressions" to test it
+    _chords = ""
+    for i, chord in enumerate(progression_dict[progression]):
+        _chords += final_key[chord-1]
         if i < len(progression) - 1:
-            chords += " "
-    return chords
+            _chords += " "
+    _chords = progression_correction(_chords, progression)
+    return _chords
 
 def main():
-    print("===========================================================")
+    print("====================================================================")
     print("Would you like to choose a key or let a random one be used?")
     print("[1] - Choose a key")
     print("[2] - Use a random key")
@@ -56,11 +58,11 @@ def main():
     final_key = chosen_key(option)
     notes, key = final_key
     chords = get_chords(notes)
-    print("===========================================================")
+    print("====================================================================")
     print(f"Key: {key}")
     print(f"Notes: {notes}")
-    print(f"Chords: {chords}") # adicionar sétimas e dizer se o acorde é menor!!!
-    print("===========================================================")
+    print(f"Chord progression: {chords}") # adicionar sétimas e dizer se o acorde é menor!!!
+    print("====================================================================")
     
 if __name__ == "__main__":
     main()

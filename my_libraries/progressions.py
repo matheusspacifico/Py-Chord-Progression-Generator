@@ -1,8 +1,8 @@
 first_progression = [1, 6, 4, 5]
 second_progression = [1, 5, 6, 4]
 third_progression = [1, 4, 7, 4] # third chord is flat (bVII)
-forth_progression = [2, 5, 1] # second chord has minor seven (V7)
-forth_progression_alternative = [2, 2, 1] # second chord is flat has minor seven (bII7)
+fourth_progression = [2, 5, 1] # second chord has minor seven (V7)
+fourth_progression_alternative = [2, 2, 1] # second chord is flat has minor seven (bII7)
 fifth_progression = [2, 3, 1] # second chord is flat has augmented fifth (bIII+)
 sixth_progression = [7, 5, 1] # first chord is diminished has minor seven (VIIo7)
 seventh_progression = [4, 3, 2, 1] # third chord is flat (bII)
@@ -33,4 +33,33 @@ seventeenth_progression = [1, 4, 2, 5]
 # 29th - twenty-ninth
 # 30th - thirtieth
 
-all_progressions = [first_progression, second_progression, third_progression]
+test = ["fourth", "third"]
+
+all_progressions = [
+    "first", "second", "third", "fourth", "fourth_alternative",
+    "fifth", "sixth", "seventh", "eighth", "ninth", "tenth",
+    "eleventh", "twelfth", "twelfth_alternative", "thirteenth",
+    "fourteenth", "fifteenth", "sixteenth", "seventeenth"
+]
+
+progression_dict = {
+    "first": first_progression,
+    "second": second_progression,
+    "third": third_progression,
+    "fourth": fourth_progression,
+    "fourth_alternative": fourth_progression_alternative,
+    "fifth": fifth_progression,
+    "sixth": sixth_progression,
+    "seventh": seventh_progression,
+    "eighth": eighth_progression,
+    "ninth": ninth_progression,
+    "tenth": tenth_progression,
+    "eleventh": eleventh_progression,
+    "twelfth": twelfth_progression,
+    "twelfth_alternative": twelfth_progression_alternative,
+    "thirteenth": thirteenth_progression,
+    "fourteenth": fourteenth_progression,
+    "fifteenth": fifteenth_progression,
+    "sixteenth": sixteenth_progression,
+    "seventeenth": seventeenth_progression
+}
