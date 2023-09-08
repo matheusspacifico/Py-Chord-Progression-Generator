@@ -7,7 +7,7 @@ fifth_progression = [2, 3, 1] # second chord is flat has augmented fifth (bIII+)
 sixth_progression = [7, 5, 1] # first chord is diminished has minor seven (VIIo7)
 seventh_progression = [4, 3, 2, 1] # third chord is flat (bII)
 eighth_progression = [2, 7, 1] # second chord is flat has minor seven (bVII7)
-ninth_progression = [1, 7, 3, 6, 2, 5, 1, 4, 4, 7, 3, 6, 3, 6, 2, 5, 1, 6] # Its complicated: learn more here https://en.wikipedia.org/wiki/Bird_changes
+ninth_progression = [1, 6, 2, 5]
 tenth_progression = [1, 5, 7, 4] #third chord is flat (bVII)
 eleventh_progression = [6, 2, 5, 1]
 twelfth_progression = [1, 5, 6, 5, 3, 5, 1] # third chord is flat (bVI)
@@ -32,8 +32,6 @@ seventeenth_progression = [1, 4, 2, 5]
 # 28th - twenty-eighth
 # 29th - twenty-ninth
 # 30th - thirtieth
-
-test = ["seventh"]
 
 all_progressions = [
     "first", "second", "third", "fourth", "fourth_alternative",

@@ -40,7 +40,7 @@ def chosen_key(option):
         return key_to_scale[random_key], key_cache
     
 def get_chords(final_key):
-    progression = "eighth" # using "test" instead of "all_progressions" to test it
+    progression = "twelfth" # using "test" instead of "all_progressions" to test it
     _chords = ""
     for i, chord in enumerate(progression_dict[progression]):
         _chords += final_key[chord-1]

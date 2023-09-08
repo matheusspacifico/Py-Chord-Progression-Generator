@@ -67,6 +67,14 @@ def progression_correction(_chords, progression):
                 if spaces == 2:
                     _chords = _chords[:i] + "7" + _chords[i:]
                     break
+    elif progression == "tenth":
+        spaces = 0
+        for i in _chords:
+            if spaces == 2:
+                _chords = _chords.replace(i, i+"b")
+                break
+            elif i == " ":
+                spaces += 1
     return _chords
 
 # ninth_progression = [1, 7, 3, 6, 2, 5, 1, 4, 4, 7, 3, 6, 3, 6, 2, 5, 1, 6] # Its complicated: learn more here https://en.wikipedia.org/wiki/Bird_changes
