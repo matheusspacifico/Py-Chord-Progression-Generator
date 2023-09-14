@@ -35,9 +35,7 @@ seventeenth_progression = [1, 4, 2, 5]
 
 all_progressions = [
     "first", "second", "third", "fourth", "fourth_alternative",
-    "fifth", "sixth", "seventh", "eighth", "ninth", "tenth",
-    "eleventh", "twelfth", "twelfth_alternative", "thirteenth",
-    "fourteenth", "fifteenth", "sixteenth", "seventeenth"
+    "fifth", "sixth", "seventh", "eighth", "ninth", "tenth"
 ]
 
 progression_dict = {
